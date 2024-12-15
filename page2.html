@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plan Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+        .option-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .option {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+        }
+        .option img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .option:hover {
+            border-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Where Will You Work Out?</h1>
+    </header>
+    <div class="option-container">
+        <div class="option" onclick="selectLocation('home')">
+            <img src="https://via.placeholder.com/100x100.png?text=Home" alt="Home">
+            <p>Home</p>
+        </div>
+        <div class="option" onclick="selectLocation('gym')">
+            <img src="https://via.placeholder.com/100x100.png?text=Gym" alt="Gym">
+            <p>Gym</p>
+        </div>
+    </div>
+    <script>
+        function selectLocation(location) {
+            localStorage.setItem('workout_location', location); // Save location to localStorage
+            window.location.href = "page3.html";               // Redirect to the next page
+        }
+    </script>
+</body>
+</html>
